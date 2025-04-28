@@ -55,5 +55,18 @@ public class MedicionesTemperaturas
             pos = pos + 1;
         }
     }
-    
+    public void cantTemperaturasExtremas(){
+        //temp extrema +35 min-15
+          int tempExt = 0;
+          int tempMin = 0;
+          for (int temperatura : registros){
+          if (temperatura >35){
+              tempExt = tempExt + 1;
+            } 
+          if (temperatura < (-15)){
+                tempMin = tempMin + 1;
+            }    
+         }
+        System.out.println("cant temp max:" + tempExt + "cant temp min: " + tempMin);
+        }
 }
