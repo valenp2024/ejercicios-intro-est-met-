@@ -60,7 +60,7 @@ public class MedicionesTemperaturas
           int tempExt = 0;
           int tempMin = 0;
           for (int temperatura : registros){
-          if (temperatura >35){
+          if (temperatura > 35){
               tempExt = tempExt + 1;
             } 
           if (temperatura < (-15)){
@@ -69,4 +69,43 @@ public class MedicionesTemperaturas
          }
         System.out.println("cant temp max:" + tempExt + "cant temp min: " + tempMin);
         }
+     //this, el punto para llamar a métodos interos?
+    public void promedio(){
+            int suma = 0;
+            int prom = 0;
+            int cant = 0;
+            for (int temperartura : registros){
+                suma = suma + temperartura;
+                cant = cant + 1;
+            }
+            prom = (suma/cant);
+            //assert (prom == 0: "no hay temperaturas registradas");
+            //HAY QUE VER QUE EL ARREGLO TENGA TEMPERATURAS
+            System.out.println("promedio: " + prom);
+        }
+    public void tMax(){
+        int tempMax = 0;
+        for (int temperatura : registros){
+            //int newMAx = 0;
+            if (temperatura > tempMax){
+                tempMax = temperatura;
+            }                
+        }
+        System.out.println("Temp max: " + tempMax);
+    }
+    public void tMin(){
+        int tempMin = 0;
+        for (int temperatura : registros){
+            //int newMAx = 0;
+            if (temperatura < tempMin){
+                tempMin = temperatura;
+            }                
+        }
+        System.out.println("Temp min: " + tempMin);
+        //return tempMin;
+    }
+    public void amplitud(){
+        //diferencia entre la max y la min
+        
+    }
 }
